@@ -34,8 +34,8 @@ namespace ClashRoyaleSqlServer
             string donaciones = textBox3.Text;
             string coleccion = textBox5.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Estadistica (victorias, tresCoronas, donaciones, coleccion, estatus) " +
-                "values('" + victorias + "', '" + tresCoronas + "', '" + donaciones + "', '" + coleccion + "', '" + estatus + "')";
+            consulta = "INSERT INTO Estadistica (victorias, tresCoronas, donaciones, coleccion) " +
+                "values('" + victorias + "', '" + tresCoronas + "', '" + donaciones + "', '" + coleccion + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -55,7 +55,7 @@ namespace ClashRoyaleSqlServer
             string coleccion = textBox5.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Estadistica SET victorias = '" + victorias + "',tresCoronas = '" + tresCoronas + "',donaciones = '" + donaciones + "',coleccion = '" + coleccion +
-                "',estatus = '" + estatus + "' WHERE idEstadistica = " + identificador.ToString();
+                 "' WHERE idEstadistica = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

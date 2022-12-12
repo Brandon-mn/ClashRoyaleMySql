@@ -32,8 +32,8 @@ namespace ClashRoyaleSqlServer
             string audio = textBox2.Text;
             string animacion = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Reaccion (nombre, audio, animacion, estatus) " +
-                "values('" + nombre + "', '" + audio + "', '" + animacion + "', '" + estatus + "')";
+            consulta = "INSERT INTO Reaccion (nombre, audio, animacion) " +
+                "values('" + nombre + "', '" + audio + "', '" + animacion +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -50,7 +50,7 @@ namespace ClashRoyaleSqlServer
             string animacion = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Reaccion SET nombre = '" + nombre + "',audio = '" + audio + "',animacion = '" + animacion +
-                "',estatus = '" + estatus + "' WHERE idReaccion = " + identificador.ToString();
+                "' WHERE idReaccion = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

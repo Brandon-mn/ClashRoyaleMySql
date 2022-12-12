@@ -29,8 +29,8 @@ namespace ClashRoyaleSqlServer
             string uso = textBox3.Text;
             string calidad = textBox5.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Comodin (almacen, maximo, uso,calidad, estatus) " +
-                "values('" + almacen + "', '" + maximo + "', '" + uso + "', '" + calidad + "', '" + estatus + "')";
+            consulta = "INSERT INTO Comodin (almacen, maximo, uso,calidad) " +
+                "values('" + almacen + "', '" + maximo + "', '" + uso + "', '" + calidad + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -49,7 +49,7 @@ namespace ClashRoyaleSqlServer
             string calidad = textBox5.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Comodin SET almacen = '" + almacen + "',maximo = '" + maximo + "',uso = '" + uso + "',calidad = '" + calidad +
-                "',estatus = '" + estatus + "' WHERE idComodin = " + identificador.ToString();
+                "' WHERE idComodin = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

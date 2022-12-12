@@ -36,8 +36,8 @@ namespace ClashRoyaleSqlServer
             string recarga = textBox5.Text;
             string descripcion = textBox6.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Habilidad (nombre, duracion, coste, recarga, descripcion, estatus) " +
-                "values('" + nombre + "', '" + duracion + "', '" + coste + "', '" + recarga + "', '" + descripcion + "', '" + estatus + "')";
+            consulta = "INSERT INTO Habilidad (nombre, duracion, coste, recarga, descripcion) " +
+                "values('" + nombre + "', '" + duracion + "', '" + coste + "', '" + recarga + "', '" + descripcion +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -58,7 +58,7 @@ namespace ClashRoyaleSqlServer
             string descripcion = textBox6.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Habilidad SET nombre = '" + nombre + "',duracion = '" + duracion + "',coste = '" + coste +
-                 "',recarga = '" + recarga + "',descripcion = '" + descripcion + "',estatus = '" + estatus + "' WHERE idHabilidad = " + identificador.ToString();
+                 "',recarga = '" + recarga + "',descripcion = '" + descripcion + "' WHERE idHabilidad = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

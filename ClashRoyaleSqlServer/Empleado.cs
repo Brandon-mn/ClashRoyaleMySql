@@ -39,9 +39,9 @@ namespace ClashRoyaleSqlServer
             string municipio = textBox8.Text;
             string idPuesto = textBox7.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Empleado (nombre, apellidoPaterno, apellidoMaterno, pais, calle, colonia, municipo, idPuesto, estatus) " +
+            consulta = "INSERT INTO Empleado (nombre, apellidoPaterno, apellidoMaterno, pais, calle, colonia, municipo, idPuesto) " +
                 "values('" + nombre + "', '" + apellidoPaterno + "', '" + apellidoMaterno + "', '" + pais + "', '" + calle + "', '" + colonia + "', '"
-                + municipio + "', '" + idPuesto + "', '" + estatus + "')";
+                + municipio + "', '" + idPuesto + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -71,7 +71,7 @@ namespace ClashRoyaleSqlServer
             string idPuesto = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Empleado SET nombre = '" + nombre + "',viapellidoPaternoda = '" + apellidoPaterno + "',apellidoMaterno = '" + apellidoMaterno + "',pais = '" + pais + "',calle = '" + calle +
-                "',colonia = '" + colonia + "',municipo = '" + municipio + "',idPuesto = '" + idPuesto + "',estatus = '" + estatus + "' WHERE idEmpleado = " + identificador.ToString();
+                "',colonia = '" + colonia + "',municipo = '" + municipio + "',idPuesto = '" + idPuesto +  "' WHERE idEmpleado = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

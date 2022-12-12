@@ -34,7 +34,7 @@ namespace ClashRoyaleSqlServer
             string codgio = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "INSERT INTO CreadorContenido (nombre, suscriptores, codigo, estatus) " +
-                "values('" + nombre + "', '" + suscriptores + "', '" + codgio + "', '" + estatus + "')";
+                "values('" + nombre + "', '" + suscriptores + "', '" + codgio +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -51,7 +51,7 @@ namespace ClashRoyaleSqlServer
             string codgio = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE CreadorContenido SET nombre = '" + nombre + "',suscriptores = '" + suscriptores + "',codigo = '" + codgio +
-                "',estatus = '" + estatus + "' WHERE idCreadorContenido = " + identificador.ToString();
+               "' WHERE idCreadorContenido = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

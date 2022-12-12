@@ -28,8 +28,8 @@ namespace ClashRoyaleSqlServer
             string credito = textBox2.Text;
             string fechaVencimiento = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO CodigoRegalo (codigo, credito, fechaVencimiento, estatus) " +
-                "values('" + codigo + "', '" + credito + "', '" + fechaVencimiento + "', '" + estatus + "')";
+            consulta = "INSERT INTO CodigoRegalo (codigo, credito, fechaVencimiento) " +
+                "values('" + codigo + "', '" + credito + "', '" + fechaVencimiento +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -47,7 +47,7 @@ namespace ClashRoyaleSqlServer
             string fechaVencimiento = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE CodigoRegalo SET codigo = '" + codigo + "',credito = '" + credito + "',fechaVencimiento = '" + fechaVencimiento +
-                "',estatus = '" + estatus + "' WHERE idCodigoRegalo = " + identificador.ToString();
+               "' WHERE idCodigoRegalo = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

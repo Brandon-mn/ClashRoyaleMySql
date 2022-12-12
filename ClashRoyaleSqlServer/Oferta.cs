@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string descripcion = textBox1.Text;
             string fechaVencimiento = textBox2.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Oferta (descripcion, fechaVencimiento,  estatus) " +
-                "values('" + descripcion + "', '" + fechaVencimiento + "', '" + estatus + "')";
+            consulta = "INSERT INTO Oferta (descripcion, fechaVencimiento) " +
+                "values('" + descripcion + "', '" + fechaVencimiento +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -49,7 +49,7 @@ namespace ClashRoyaleSqlServer
             string fechaVencimiento = textBox2.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Oferta SET descripcion = '" + descripcion + "',fechaVencimiento = '" + fechaVencimiento +
-                "',estatus = '" + estatus + "' WHERE idOferta = " + identificador.ToString();
+              "' WHERE idOferta = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

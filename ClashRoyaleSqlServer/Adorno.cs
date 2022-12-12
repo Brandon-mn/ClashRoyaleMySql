@@ -37,8 +37,8 @@ namespace ClashRoyaleSqlServer
             string calidad = textBox2.Text;
             string tematica = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Adorno (nombre, tematica, calidad, estatus) " +
-                "values('" + nombre + "', '" + tematica + "', '" + calidad + "', '" + estatus  + "')";
+            consulta = "INSERT INTO Adorno (nombre, tematica, calidad) " +
+                "values('" + nombre + "', '" + tematica + "', '" + calidad + "', '" +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -57,8 +57,8 @@ namespace ClashRoyaleSqlServer
             string calidad = textBox2.Text;
             string tematica = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "UPDATE Adorno SET nombre = '" + nombre + "',tematica = '" + tematica + "',calidad = '" + calidad +
-                "',estatus = '" + estatus + "' WHERE idAdorno = " + idAdorno.ToString();
+            consulta = "UPDATE Adorno SET nombre = '" + nombre + "',tematica = '" + tematica + "',calidad = '" + calidad 
+               + "' WHERE idAdorno = " + idAdorno.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

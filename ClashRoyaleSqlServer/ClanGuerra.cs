@@ -28,8 +28,8 @@ namespace ClashRoyaleSqlServer
             string idClan = textBox2.Text;
             string idGuerra = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO ClanGuerra (duracion, idClan, idGuerra, estatus) " +
-                "values('" + duracion + "', '" + idClan + "', '" + idGuerra + "', '" + estatus + "')";
+            consulta = "INSERT INTO ClanGuerra (duracion, idClan, idGuerra) " +
+                "values('" + duracion + "', '" + idClan + "', '" + idGuerra + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -46,7 +46,7 @@ namespace ClashRoyaleSqlServer
             string idGuerra = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE ClanGuerra SET duracion = '" + duracion + "',idClan = '" + idClan + "',idGuerra = '" + idGuerra +
-                "',estatus = '" + estatus + "' WHERE idClanGuerra = " + identificador.ToString();
+               "' WHERE idClanGuerra = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

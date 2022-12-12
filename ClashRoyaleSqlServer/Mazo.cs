@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string tipo = textBox2.Text;
             string coste = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Mazo (nivel, tipo, coste, estatus) " +
-                "values('" + nivel + "', '" + tipo + "', '" + coste + "', '" + estatus + "')";
+            consulta = "INSERT INTO Mazo (nivel, tipo, coste) " +
+                "values('" + nivel + "', '" + tipo + "', '" + coste +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -51,7 +51,7 @@ namespace ClashRoyaleSqlServer
             string coste = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Mazo SET nivel = '" + nivel + "',tipo = '" + tipo + "',coste = '" + coste +
-                "',estatus = '" + estatus + "' WHERE idMazo = " + identificador.ToString();
+                "' WHERE idMazo = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

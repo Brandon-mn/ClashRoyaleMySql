@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string idSupercell = textBox1.Text;
             string idEmpleado = textBox2.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO SupercellEmpleado (idSupercell, idEmpleado,  estatus) " +
-                "values('" + idSupercell + "', '" + idEmpleado + "', '" + estatus + "')";
+            consulta = "INSERT INTO SupercellEmpleado (idSupercell, idEmpleado) " +
+                "values('" + idSupercell + "', '" + idEmpleado + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -49,7 +49,7 @@ namespace ClashRoyaleSqlServer
             string idEmpleado = textBox2.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE SupercellEmpleado SET idSupercell = '" + idSupercell + "',idEmpleado = '" + idEmpleado +
-                "',estatus = '" + estatus + "' WHERE idSupercellEmpleado = " + identificador.ToString();
+              "' WHERE idSupercellEmpleado = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

@@ -34,8 +34,8 @@ namespace ClashRoyaleSqlServer
             string juegos = textBox3.Text;
             //string idJugador = textBox5.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Supercell (correo, codigo, juegos, idJugador, estatus) " +
-                "values('" + correo + "', '" + codigo + "', '" + juegos + "', '" +  estatus + "')";
+            consulta = "INSERT INTO Supercell (correo, codigo, juegos, idJugador) " +
+                "values('" + correo + "', '" + codigo + "', '" + juegos +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -53,7 +53,7 @@ namespace ClashRoyaleSqlServer
             string juegos = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Supercell SET correo = '" + correo + "',codigo = '" + codigo + "',juegos = '" + juegos + 
-                "',estatus = '" + estatus + "' WHERE idSupercell= " + identificador.ToString();
+              "' WHERE idSupercell= " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

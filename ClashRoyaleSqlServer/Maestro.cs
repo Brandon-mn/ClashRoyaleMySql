@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string nivel = textBox2.Text;
             string dificultad = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Maestro (nombre, nivel, dificultad, estatus) " +
-                "values('" + nombre + "', '" + nivel + "', '" + dificultad + "', '" + estatus + "')";
+            consulta = "INSERT INTO Maestro (nombre, nivel, dificultad) " +
+                "values('" + nombre + "', '" + nivel + "', '" + dificultad + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -51,7 +51,7 @@ namespace ClashRoyaleSqlServer
             string dificultad = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Maestro SET nombre = '" + nombre + "',nivel = '" + nivel + "',dificultad = '" + dificultad +
-                "',estatus = '" + estatus + "' WHERE idMaestro = " + identificador.ToString();
+             "' WHERE idMaestro = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

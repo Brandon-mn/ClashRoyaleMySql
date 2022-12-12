@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string nombre = textBox1.Text;
             string trofeos = textBox2.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Solicitud (nombre, trofeos,  estatus) " +
-                "values('" + nombre + "', '" + trofeos + "', '" + estatus + "')";
+            consulta = "INSERT INTO Solicitud (nombre, trofeos) " +
+                "values('" + nombre + "', '" + trofeos +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -49,7 +49,7 @@ namespace ClashRoyaleSqlServer
             string trofeos = textBox2.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Solicitud SET nombre = '" + nombre + "',trofeos = '" + trofeos +
-                "',estatus = '" + estatus + "' WHERE idSolicitud = " + identificador.ToString();
+              "' WHERE idSolicitud = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

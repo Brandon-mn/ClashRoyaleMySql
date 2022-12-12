@@ -29,8 +29,8 @@ namespace ClashRoyaleSqlServer
             string opcion = textBox2.Text;
             string tipo = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Mercader (ficha, opcion, tipo, estatus) " +
-                "values('" + ficha + "', '" + opcion + "', '" + tipo + "', '" + estatus + "')";
+            consulta = "INSERT INTO Mercader (ficha, opcion, tipo) " +
+                "values('" + ficha + "', '" + opcion + "', '" + tipo +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -47,7 +47,7 @@ namespace ClashRoyaleSqlServer
             string tipo = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Mercader SET ficha = '" + ficha + "',opcion = '" + opcion + "',tipo = '" + tipo +
-                "',estatus = '" + estatus + "' WHERE idMercader = " + identificador.ToString();
+               "' WHERE idMercader = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

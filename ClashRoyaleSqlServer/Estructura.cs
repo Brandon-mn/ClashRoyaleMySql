@@ -32,8 +32,8 @@ namespace ClashRoyaleSqlServer
             string coste = textBox6.Text;
             string idCarta = textBox7.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Estructura (nombre, vida, velocidad, alcance, objetivo,  coste, idCarta, estatus) " +
-                "values('" + nombre + "', '" + vida + "', '" + velocidad + "', '" + alcance + "', '" + objetivo + "', '" + coste + "', '" + idCarta + "', '" + estatus + "')";
+            consulta = "INSERT INTO Estructura (nombre, vida, velocidad, alcance, objetivo,  coste, idCarta) " +
+                "values('" + nombre + "', '" + vida + "', '" + velocidad + "', '" + alcance + "', '" + objetivo + "', '" + coste + "', '" + idCarta + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -59,7 +59,7 @@ namespace ClashRoyaleSqlServer
             string idCarta = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Estructura SET nombre = '" + nombre + "',vida = '" + vida + "',velocidad = '" + velocidad + "',alcance = '" + alcance + "',objetivo = '" + objetivo 
-              + "',coste = '" + coste + "',idCarta = '"+ idCarta +"',estatus = '" + estatus + "' WHERE idEstructura = " + identificador.ToString();
+              + "',coste = '" + coste + "',idCarta = '"+ idCarta + "' WHERE idEstructura = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

@@ -34,9 +34,9 @@ namespace ClashRoyaleSqlServer
             string idCarta = textBox8.Text;
             string idHabilidad = textBox7.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Campeon (nombre, vida, velocidad, alcance, daño, coste, idCarta, idHabilidad, estatus) " +
+            consulta = "INSERT INTO Campeon (nombre, vida, velocidad, alcance, daño, coste, idCarta, idHabilidad, ) " +
                 "values('" + nombre + "', '" + vida + "', '" + velocidad + "', '" + alcance + "', '" + daño + "', '"+ coste + "', '"
-                + idCarta + "', '" + idHabilidad + "', '" + estatus + "')";
+                + idCarta + "', '" + idHabilidad + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -66,7 +66,7 @@ namespace ClashRoyaleSqlServer
             string idHabilidad = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Campeon SET nombre = '" + nombre + "',vida = '" + vida + "',velocidad = '" + velocidad + "',alcance = '" + alcance + "',daño = '" + daño +
-                "',coste = '" + coste + "',idCarta = '" + idCarta + "',idHabilidad = '" + idHabilidad + "',estatus = '" + estatus + "' WHERE idCampeon = " + identificador.ToString();
+                "',coste = '" + coste + "',idCarta = '" + idCarta + "',idHabilidad = '" + idHabilidad + "' WHERE idCampeon = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

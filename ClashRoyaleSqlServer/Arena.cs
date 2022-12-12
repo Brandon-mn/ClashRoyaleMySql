@@ -54,7 +54,7 @@ namespace ClashRoyaleSqlServer
             string rango = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Arena SET tematica = '" + tematica + "',numero = '" + numero + "',nombre = '" + nombre + "',rango = '" + rango +
-                "',estatus = '" + estatus + "' WHERE idArena = " + identificador.ToString();
+              "' WHERE idArena = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

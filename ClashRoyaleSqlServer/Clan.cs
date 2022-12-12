@@ -36,8 +36,8 @@ namespace ClashRoyaleSqlServer
             string idLigClan = textBox9.Text;
             string idPedido = textBox10.Text;
             string idIntercambio = textBox11.Text;
-            consulta = "INSERT INTO Clan (nombre, tipo, trofeos, estatus, miembros, codigo, idModoJuego, idMercader, idLigClan, idPedido, idIntercambio) " +
-                "values('" + nombre + "', '" + tipo + "', '" + trofeos + "', '" + estatus + "', '" + miembros + "', '" + codigo + "', '" + idModoJuego +
+            consulta = "INSERT INTO Clan (nombre, tipo, trofeos, miembros, codigo, idModoJuego, idMercader, idLigClan, idPedido, idIntercambio) " +
+                "values('" + nombre + "', '" + tipo + "', '" + trofeos + "', '"  + miembros + "', '" + codigo + "', '" + idModoJuego +
                 "', '" + idMercader + "', '" + idLigClan + "', '" + idPedido + "', '" + idIntercambio+ "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
@@ -72,7 +72,7 @@ namespace ClashRoyaleSqlServer
             string idPedido = textBox10.Text;
             string idIntercambio = textBox11.Text;
             consulta = "UPDATE Clan SET nombre = '" + nombre + "',tipo = '" + tipo + "',tipo = '" + tipo +
-                "',estatus = '" + estatus + "',trofeos = '" + trofeos + "'" + ",miembros = '" + miembros +
+                "',trofeos = '" + trofeos + "'" + ",miembros = '" + miembros +
                 "',codigo = '" + codigo + "',idModoJuego = '" + idModoJuego + "',idMercader = '" + idMercader + "'" +
                 ",idLigClan = '" + idLigClan + "',idPedido = '" + idPedido + "',idIntercambio = '" + idIntercambio + "' WHERE idClan = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);

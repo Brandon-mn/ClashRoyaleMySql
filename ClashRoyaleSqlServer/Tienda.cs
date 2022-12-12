@@ -37,8 +37,8 @@ namespace ClashRoyaleSqlServer
             string idOferta = textBox6.Text;
             string idCodigoRegalo = textBox7.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Tienda (oro, gemas, cantidad, idCofre, idReaccion,  idOferta, idCodigoRegalo, estatus) " +
-                "values('" + oro + "', '" + gemas + "', '" + cantidad + "', '" + idCofre + "', '" + idReaccion + "', '" + idOferta + "', '" + idCodigoRegalo + "', '" + estatus + "')";
+            consulta = "INSERT INTO Tienda (oro, gemas, cantidad, idCofre, idReaccion,  idOferta, idCodigoRegalo) " +
+                "values('" + oro + "', '" + gemas + "', '" + cantidad + "', '" + idCofre + "', '" + idReaccion + "', '" + idOferta + "', '" + idCodigoRegalo + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -63,7 +63,7 @@ namespace ClashRoyaleSqlServer
             string idCodigoRegalo = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Tienda SET oro = '" + oro + "',gemas = '" + gemas + "',cantidad = '" + cantidad + "',idCofre = '" + idCofre + "',idReaccion = '" + idReaccion +
-                  "',idOferta = '" + idOferta + "',idCodigoRegalo = '" + idCodigoRegalo + "',estatus = '" + estatus + "' WHERE idTienda = " + identificador.ToString();
+                  "',idOferta = '" + idOferta + "',idCodigoRegalo = '" + idCodigoRegalo + "' WHERE idTienda = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

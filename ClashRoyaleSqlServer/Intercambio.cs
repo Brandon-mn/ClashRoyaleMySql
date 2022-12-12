@@ -33,8 +33,8 @@ namespace ClashRoyaleSqlServer
             string fecha = textBox2.Text;
             string cantidad = textBox3.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Intrercambio (calidad, fecha, cantidad, estatus) " +
-                "values('" + calidad + "', '" + fecha + "', '" + cantidad + "', '" + estatus + "')";
+            consulta = "INSERT INTO Intrercambio (calidad, fecha, cantidad) " +
+                "values('" + calidad + "', '" + fecha + "', '" + cantidad +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -52,7 +52,7 @@ namespace ClashRoyaleSqlServer
             string cantidad = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Intrercambio SET calidad = '" + calidad + "',fecha = '" + fecha + "',cantidad = '" + cantidad +
-                "',estatus = '" + estatus + "' WHERE idIntercambio = " + identificador.ToString();
+                "' WHERE idIntercambio = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

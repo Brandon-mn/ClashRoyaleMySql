@@ -30,7 +30,7 @@ namespace ClashRoyaleSqlServer
             string recompensa = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "INSERT INTO Bonus (diario, semanal, experiencia, recompensa,  estatus) " +
-                "values('" + diario + "', '" + semanal + "', '" + experiencia + "', '" + recompensa + "', '" + estatus + "')";
+                "values('" + diario + "', '" + semanal + "', '" + experiencia + "', '" + recompensa + "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -52,7 +52,7 @@ namespace ClashRoyaleSqlServer
             string recompensa = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Bonus SET diario = '" + diario + "',semanal = '" + semanal + "',experiencia = '" + experiencia + "',recompensa = '" + recompensa +
-                "',estatus = '" + estatus + "' WHERE idBonus = " + identificador.ToString();
+                "' WHERE idBonus = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

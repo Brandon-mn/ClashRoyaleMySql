@@ -30,7 +30,7 @@ namespace ClashRoyaleSqlServer
             string comodines = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "INSERT INTO Botin (oro, cartas, comodines,  estatus) " +
-                "values('" + oro + "', '" + cartas + "', '" + comodines + "', '" + estatus + "')";
+                "values('" + oro + "', '" + cartas + "', '" + comodines +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -50,7 +50,7 @@ namespace ClashRoyaleSqlServer
             string comodines = textBox3.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Botin SET oro = '" + oro + "',cartas = '" + cartas + "',comodines = '" + comodines +
-                "',estatus = '" + estatus + "' WHERE idBotin = " + identificador.ToString();
+                "' WHERE idBotin = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();

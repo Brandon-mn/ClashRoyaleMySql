@@ -36,8 +36,8 @@ namespace ClashRoyaleSqlServer
             string definicion = textBox6.Text;
             string recompensa = textBox7.Text;
             string estatus = textBox4.Text;
-            consulta = "INSERT INTO Maestria (nombre, dificultad, calidad, experiencia, definicion,  recompensa, estatus) " +
-                "values('" + nombre + "', '" + dificultad + "', '" + calidad + "', '" + experiencia + "', '" + definicion + "', '" + recompensa + "', '" + estatus + "')";
+            consulta = "INSERT INTO Maestria (nombre, dificultad, calidad, experiencia, definicion,  recompensa) " +
+                "values('" + nombre + "', '" + dificultad + "', '" + calidad + "', '" + experiencia + "', '" + definicion + "', '" + recompensa +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 
@@ -61,7 +61,7 @@ namespace ClashRoyaleSqlServer
             string recompensa = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Maestria SET nombre = '" + nombre + "',dificultad = '" + dificultad + "',calidad = '" + calidad + "',experiencia = '" + experiencia +
-                "',definicion = '" + definicion +"',recompensa = '" + recompensa + "',estatus = '" + estatus + "' WHERE idMaestria = " + identificador.ToString();
+                "',definicion = '" + definicion +"',recompensa = '" + recompensa +  "' WHERE idMaestria = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
 

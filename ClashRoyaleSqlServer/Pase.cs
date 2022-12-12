@@ -38,8 +38,8 @@ namespace ClashRoyaleSqlServer
             string idNivel = textBox7.Text;
             string estatus = textBox4.Text;
 
-            consulta = "INSERT INTO Pase (nombre, temporada, tematica, idAspecto, idReaccion, idNivel, estatus) " +
-                "values('" + nombre + "', '" + temporada + "', '" + tematica + "', '" + idAspecto + "', '" + idReaccion + "', '" + idNivel + "', '" + estatus + "')";
+            consulta = "INSERT INTO Pase (nombre, temporada, tematica, idAspecto, idReaccion, idNivel) " +
+                "values('" + nombre + "', '" + temporada + "', '" + tematica + "', '" + idAspecto + "', '" + idReaccion + "', '" + idNivel +  "')";
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
@@ -61,7 +61,7 @@ namespace ClashRoyaleSqlServer
             string idNivel = textBox7.Text;
             string estatus = textBox4.Text;
             consulta = "UPDATE Pase SET nombre = '" + nombre + "',temporada = '" + temporada + "',tematica = '" + tematica +
-                 "',idAspecto = '" + idAspecto + "',idReaccion = '" + idReaccion + "',idNivel = '" + idNivel + "',estatus = '" + estatus + "' WHERE idPase = " + identificador.ToString();
+                 "',idAspecto = '" + idAspecto + "',idReaccion = '" + idReaccion + "',idNivel = '" + idNivel + "' WHERE idPase = " + identificador.ToString();
             conexinsqlserver.ejecutaConsulta(consulta);
             MostrarDatos();
             textBox1.Clear();
